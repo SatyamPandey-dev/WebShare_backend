@@ -49,7 +49,7 @@ app.post("/upload", upload.single("file"), async (req, res) => {
 
     // Instead of sending signed URL directly, send sharable app link
     res.json({
-      shareUrl: `https://web-share-client.vercel.app/${filePath}`, // React site route
+      shareUrl: `https://web-share-client.vercel.app/file/${filePath}`, // React site route
       fileId: filePath,
       expiresIn: expirySeconds,
     });
